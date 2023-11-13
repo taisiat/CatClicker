@@ -9,15 +9,10 @@ function CatTile({ cat }) {
       return { ...prev, [cat.id]: prev[cat.id] + 1 || 1 };
     });
     setClicked(() => true);
-    // console.log("clicked", clicked);
     setTimeout(() => {
       setClicked(() => false);
     }, 500);
   }
-
-  useEffect(() => {
-    console.log(clicked);
-  }, [clicked]);
 
   return (
     <>

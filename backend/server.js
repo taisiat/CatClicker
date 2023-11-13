@@ -63,6 +63,7 @@ async function addCats() {
 app.use(cors());
 app.use(express.json());
 
+//get cats from mysql db
 app.get("/getCatsDB", (req, res) => {
   console.log("get cats db");
   const query = "SELECT * FROM cats";
@@ -74,6 +75,7 @@ app.get("/getCatsDB", (req, res) => {
   });
 });
 
+//get cats from json
 app.get("/getCats", (req, res) => {
   const response = JSON.stringify([
     {

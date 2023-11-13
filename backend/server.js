@@ -65,7 +65,6 @@ app.use(express.json());
 
 //get cats from mysql db
 app.get("/getCatsDB", (req, res) => {
-  console.log("get cats db");
   const query = "SELECT * FROM cats";
   db.query(query, (err, result) => {
     if (err) {

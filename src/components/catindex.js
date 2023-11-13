@@ -14,7 +14,7 @@ function CatIndex() {
 
   return (
     <>
-      <h1>Cat Index</h1>
+      <h1>We have some cats</h1>
       {cats &&
         cats.map((cat, idx) => {
           return (

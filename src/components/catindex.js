@@ -1,12 +1,16 @@
 import CatTile from "./cattile";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function CatIndex() {
-  const [cats, setCats] = useState([
-    { name: "Tom", id: 1 },
-    { name: "Jerry", id: 2 },
-  ]);
+  const [cats, setCats] = useState([]);
   const [cat, setCat] = useState(null);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/getCats")
+      .then((res) => res.json())
+      .then((data) => setCats(data))
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <>

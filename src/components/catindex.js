@@ -19,10 +19,11 @@ function CatIndex() {
         cats.map((cat, idx) => {
           return (
             <>
-              <a href="#" onClick={() => setCat(cat)} key={idx}>
-                {cat.name}
-              </a>
-              <br />
+              <ul>
+                <li className="cat-name" onClick={() => setCat(cat)} key={idx}>
+                  {cat.name}
+                </li>
+              </ul>
             </>
           );
         })}

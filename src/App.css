@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.cat-name {
+  text-decoration: underline;
+}
+
+.cat-name:hover {
+  color: #61dafb;
+  cursor: pointer;
+}

@@ -8,10 +8,10 @@ function CatTile({ cat }) {
     setCounter((prev) => {
       return { ...prev, [cat.id]: prev[cat.id] + 1 || 1 };
     });
-    setClicked(true);
+    setClicked(() => true);
     // console.log("clicked", clicked);
     setTimeout(() => {
-      setClicked(false);
+      setClicked(() => false);
     }, 500);
   }
 

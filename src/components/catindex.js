@@ -6,7 +6,7 @@ function CatIndex() {
   const [cat, setCat] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/getCats")
+    fetch("http://localhost:5000/getCatsDB")
       .then((res) => res.json())
       .then((data) => setCats(data))
       .catch((err) => console.log(err));

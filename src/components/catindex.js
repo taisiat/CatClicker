@@ -12,10 +12,17 @@ function CatIndex() {
     <>
       <h1>Cat Index</h1>
       {cats &&
-        cats.map((cat) => {
-          return <p onClick={() => setCat(cat.id)}>{cat.name}</p>;
+        cats.map((cat, idx) => {
+          return (
+            <>
+              <a href="#" onClick={() => setCat(cat)} key={idx}>
+                {cat.name}
+              </a>
+              <br />
+            </>
+          );
         })}
-      <CatTile catId={cat} />
+      <CatTile cat={cat} />
     </>
   );
 }

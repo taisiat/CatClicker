@@ -54,4 +54,28 @@
 
 .cat-pic {
   transition: transform 0.5s ease;
+  width: 100%;
+}
+
+/* .cat-pic.clicked {
+  transform: scale(1.5);
+  transition: transform 0.25s ease;
+  background-color: red;
+} */
+
+.heart {
+  display: none;
+}
+
+.heart.clicked {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 250px;
+}
+
+.cat-pic-container {
+  display: flex;
+  width: 500px;
+  background-color: red;
 }

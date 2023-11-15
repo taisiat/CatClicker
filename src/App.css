@@ -57,25 +57,19 @@
   width: 100%;
 }
 
-/* .cat-pic.clicked {
-  transform: scale(1.5);
-  transition: transform 0.25s ease;
-  background-color: red;
-} */
-
 .heart {
   display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .heart.clicked {
   display: block;
-  position: absolute;
-  top: 50%;
-  left: 250px;
 }
 
 .cat-pic-container {
-  display: flex;
-  width: 500px;
-  background-color: red;
+  position: relative;
+  display: inline-block;
 }

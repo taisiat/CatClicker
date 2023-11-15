@@ -9,7 +9,6 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/cat" element={<CatIndex />}></Route>
-          {/* <Route path="*" element={<h1>not a page</h1>}></Route> */}
           <Route path="*" element={<Navigate to="/cat" />}></Route>
         </Routes>
       </BrowserRouter>

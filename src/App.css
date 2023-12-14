@@ -72,4 +72,5 @@
 .cat-pic-container {
   position: relative;
   display: inline-block;
+  width: 400px;
 }

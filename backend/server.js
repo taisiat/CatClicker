@@ -5,9 +5,9 @@ const PORT = 5000;
 const cors = require("cors");
 
 const db = mysql.createConnection({
-  password: "",
-  user: "root",
-  host: "localhost",
+  password: process.env.MYSQL_ROOT_PASSWORD || "",
+  user: process.env.MYSQL_USER || "root",
+  host: process.env.MYSQL_HOST || "localhost",
 });
 
 db.connect((err) => {
@@ -49,11 +49,31 @@ db.connect((err) => {
 async function addCats() {
   let sql = "INSERT INTO cats (name, url) VALUES (?, ?)";
   let catsInfo = [
-    ["Tom", "http://placekitten.com/601/350"],
-    ["Jerry", "http://placekitten.com/602/350"],
-    ["Rally", "http://placekitten.com/603/350"],
-    ["Lex", "http://placekitten.com/604/350"],
-    ["Manoj", "http://placekitten.com/605/361"],
+    // ["Tom", "http://placekitten.com/601/350"],
+    // ["Jerry", "http://placekitten.com/602/350"],
+    // ["Rally", "http://placekitten.com/603/350"],
+    // ["Lex", "http://placekitten.com/604/350"],
+    // ["Manoj", "http://placekitten.com/605/361"],
+    [
+      "Tom",
+      "https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    ],
+    [
+      "Jerry",
+      "https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    ],
+    [
+      "Rally",
+      "https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    ],
+    [
+      "Lex",
+      "https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    ],
+    [
+      "Manoj",
+      "https://images.unsplash.com/photo-1598188306155-25e400eb5078?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    ],
   ];
   for (let cat of catsInfo) {
     db.query(sql, [cat[0], cat[1]]);

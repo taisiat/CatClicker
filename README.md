@@ -6,7 +6,7 @@ I built this fun app to practice my skills! This was a great chance to refresh a
 2. Mini NodeJS backend with mySQL integration
 3. React function components and props
 
-To run, execute `./run.sh` from `catclick` directory.
+To run, execute `./run.sh` from the outer directory (Mac).
 
 Thanks for checking out this mini project. Feel free to fork and practice building something similar. ✨
 
